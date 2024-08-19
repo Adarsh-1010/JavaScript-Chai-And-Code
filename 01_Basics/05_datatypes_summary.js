@@ -56,4 +56,33 @@ const myFunction=function fun(){
 console.log(typeof arr); //object
 
 
+// ************STACK AND HEAP MEMORY************
+
+// Stack => Primitive Types
+
+// Heap => Non Primitive Types
+
+ let my_Name="Adarsh Pathak";
+  let anotherName=my_Name;      //another variable is created and Adarsh Pathak is assigned to it 
+
+  anotherName="Hello world";
+
+  console.log(my_Name); //Adarsh Pathak
+  console.log(anotherName);//Hello world
+
+  let userOne={
+    email:"adarsh@gmail.com",
+    upi:"123455"
+  }
+
+  let userTwo=userOne;   //another variable is created but userTwo is refrencing to the same userOne only
+
+  //any changes made to userTwo is reflected in userOne
+
+  userTwo.email="hello world @gamil.com";
+
+  console.log(userOne.email);
+
+  console.log(userTwo.email);
+
 
