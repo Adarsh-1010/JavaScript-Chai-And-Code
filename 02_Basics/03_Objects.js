@@ -36,5 +36,37 @@ user.greeting=function fun(){ //added a method to the user
 
 console.log(user.greeting); //returns a function
 console.log(user.greeting()); // returns the content of the function 
+// When you have a function in JavaScript, it can perform actions and return a result. For example:
+
+// javascript
+// Copy code
+// function add(a, b) {
+//     return a + b;
+// }
+// Here, the function add takes two numbers, adds them, and then uses the return statement to give back the result.
+
+// 2. What Happens If There's No return Statement?
+// If a function does not explicitly have a return statement, JavaScript automatically returns undefined. This means the function completes its task but doesn't give back any specific value.
+
+// For example:
+
+// javascript
+// Copy code
+// function sayHello() {
+//     console.log("Hello World");
+// }
+// This sayHello function prints "Hello World" to the console, but it doesn't return any value. So, if you call:
+
+// javascript
+// Copy code
+// let result = sayHello();
+// The result will be undefined because there's no return statement in the function.
+
+user.greeting2=function(){
+    console.log(`Hello user, ${this.name}`);
+}
+
+console.log(user.greeting());
+console.log(user.greeting2());
 
 
