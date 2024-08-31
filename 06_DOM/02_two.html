@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <!-- This is comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday </div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday </div>
+    </div>
+</body>
+<script>
+    const element=document.querySelector(".parent");
+    console.log(element)
+    console.log(element.children); //HTML collection of all children of element
+    console.log(element.children[1]);//prints child of that particular index
+    console.log(element.children[1].innerHTML);//tuesday
+
+    for (let i = 0; i < element.children.length; i++) {
+        // if(element.children[i].innerHTML==="Monday")
+        // continue;
+        console.log(element.children[i].innerHTML);
+        
+    }
+    element.children[1].style.color="green";
+    console.log(element.firstElementChild);//first child of element get printed ...This is the another way of accessing the child from html collection
+    console.log(element.lastElementChild);//last element get printed
+
+    const dayone=document.querySelector(".day");
+    console.log(dayone);
+
+    console.log(dayone.parentElement);// prints the parent element
+    console.log(dayone.nextElementSibling);//prints next sibling in html format
+
+    console.log("Nodes: ",element.childNodes);//important
+    // 0 : text: Represents a text node before the first <div class="day">. This is likely due to the whitespace (newline or spaces) between the opening <div class="parent"> and the first <div class="day">. The browser considers any text, including whitespace, as a text node in the DOM.
+    
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    const div=document.createElement("div"); //created element div
+    console.log(div);
+    div.className='main';
+    div.id=Math.floor(Math.random()*10+1);//we will get random id every time....
+    div.setAttribute("title","generated title");
+    div.style.backgroundColor="green";
+
+    // div.innerText="chai aur code";
+    const addText=document.createTextNode("chai aur code");
+    div.appendChild(addText);
+    document.body.appendChild(div);
+//     document.body:
+
+// document is a global object in JavaScript that represents the entire HTML document.
+// body is a property of the document object that refers to the <body> element of the HTML document. The <body> contains all the visible content of a webpage, such as text, images, and other elements.
+// appendChild(div):
+
+// appendChild() is a method available on DOM elements. It is used to add a new child node (element) to the end of a specified parent node.
+// div is the element that is being added as a child. In this context, div is assumed to be a reference to a div element that was created earlier in the script.
+</script>
+</html>

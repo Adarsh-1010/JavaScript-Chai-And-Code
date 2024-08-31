@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code DOM</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML=`${langname}`;
+        document.querySelector('.language').appendChild(li);
+
+    }
+    addlanguage("python");
+    addlanguage("typescript");
+
+    function addOptilanguage(langname){
+        const li=document.createElement('li')
+        const addText=document.createTextNode(langname);
+        li.appendChild(addText);
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptilanguage("golang");
+    // Performance:
+// First Approach (innerHTML): Using innerHTML can be slightly less efficient because the browser has to parse the string as HTML, reconstruct the DOM, and potentially re-render parts of the page.
+// Second Approach (createTextNode): This approach is more direct and can be more efficient because you're directly working with DOM nodes without the need for the browser to parse and re-render.
+
+// *********EDIT*********
+const secondlang=document.querySelector("Li:nth-child(2)");
+secondlang.innerHTML="MOJO";
+// "Li:nth-child(2)":
+// This is the CSS selector passed to querySelector().
+
+// Li: This part of the selector targets an <li> element. Note that the tag name in CSS selectors is case-insensitive, so "li" and "Li" are equivalent. However, it is conventional to use lowercase for tag names, so "li:nth-child(2)" would be more typical.
+
+// :nth-child(2): This is a CSS pseudo-class that matches the second child element of its parent. The 2 means it specifically targets the second element among its siblings.
+ 
+//  ********Another way of editing the element*********
+const newli=document.createElement("li");
+newli.textContent="hello";
+secondlang.replaceWith(newli);
+
+const firstlang = document.querySelector("li:first-child");
+firstlang.outerHTML = "<li>Typescript</li>";
+
+// *****Remove*****
+const lastlang=document.querySelector("li:last-child");
+lastlang.remove();
+
+</script>
+</html>
